@@ -16,7 +16,7 @@ public class Main {
 		ArrayList<String[]> data = new ArrayList<String[]>();
 		
 		int count = 0;
-		String dataLine = ""; //initializes dataLine, where the line of data is initially stored
+		String dataLine = "";										//initializes dataLine, where the line of data is initially stored
 		while(fileScanner.hasNextLine()) {
 			count++;
 			if(count == 1) {
@@ -48,6 +48,35 @@ public class Main {
 		}
 		/****************************************************************/
 		/****************************************************************/
+		
+		fileScanner.close();
+		boolean end = false;
+		String answer = "";
+		
+		Scanner kbd = null;
+		while(end != true) {
+			System.out.println("\nPlease enter a query");
+			kbd = new Scanner(System.in);
+			String query = kbd.nextLine();
+			/************************************************************************/
+			
+			//TODO place hashmap queries here
+			
+			/************************************************************************/
+			
+			System.out.println("Would you like to continue? Please enter \'N\' \'n\' \'No\'  or \'no\' to stop.");
+			answer = kbd.nextLine();
+			if(answer.equals("N") || answer.equals("n") || answer.equals("No") || answer.equals("no")) {
+				end = true;
+			}
+			
+			
+		}
+		kbd.close();
+		
+		
+		
+		
 	}
 
 }
