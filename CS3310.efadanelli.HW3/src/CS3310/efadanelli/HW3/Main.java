@@ -10,7 +10,9 @@ public class Main {
 	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
 		
-		File file = new File("sample.txt");
+		long timer = System.currentTimeMillis();
+				
+		File file = new File("url.txt");
 		Scanner fileScanner = new Scanner(file);
 		
 		ArrayList<String[]> data = new ArrayList<String[]>();
@@ -74,9 +76,5 @@ public class Main {
 		}
 		kbd.close();
 		
-		
-		
-		
 	}
-
 }
