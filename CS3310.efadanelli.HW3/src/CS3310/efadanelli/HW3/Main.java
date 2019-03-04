@@ -72,7 +72,12 @@ public class Main {
 			String query = kbd.nextLine();
 			/************************************************************************/
 			
-			//TODO place hashmap queries here
+			Node<String, String> map = new Node<String, String>(data.get(0)[1],data.get(0)[0]);
+			for(int i=0;i>data.size();i++) {
+				for(int j=2; i>data.size();i++) {
+					//
+				}
+			}
 			
 			/************************************************************************/
 			
