@@ -2,21 +2,17 @@ package CS3310.efadanelli.HW3;
 
 import java.util.*;
 
-public class Node<K, E> {
+public class Node<K, V> {
 	K key;//the key inside the node
-	Node<K, E> next;//next pointer
-	ArrayList<E> bucket = new ArrayList<E>();
+	Node<K, V> next;//next pointer
+	ArrayList<V> bucket = new ArrayList<V>();
 	
-	Node(K keyValue){
+	Node(K keyValue, V value){
 		key = keyValue;	//data inside the node
+		this.bucket.add(value);
 	}
-	
-	Node(K keyValue, Node<K, E> nextNode){
-		key = keyValue;//what inside the node
-		next = nextNode;//what the node points to next
-	}
-	
-	public E getBucketElement(int index) {
+
+	public V getBucketElement(int index) {
 		return bucket.get(index);
 	}
 	
@@ -24,7 +20,7 @@ public class Node<K, E> {
 		return bucket.size();
 	}
 	
-	public ArrayList<E> getBucket() {
+	public ArrayList<V> getBucket() {
 		return bucket;
 	}
 	
@@ -32,12 +28,12 @@ public class Node<K, E> {
 		return key;//return data
 	}
 
-	public Node<K,E> getNext() {
+	public Node<K,V> getNext() {
 		
 		return next; //return next
 	}
 
-	public void setNext(Node<K,E> next) {
+	public void setNext(Node<K,V> next) {
 		
 		this.next = next; // this.next points to the next node "next"
 	}
