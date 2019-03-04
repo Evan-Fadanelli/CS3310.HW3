@@ -22,7 +22,7 @@ class HashNode<K, V>
 } 
 
 //Class to represent entire hash table 
-class Map<K, V> 
+class Map_HashNode<K, V> 
 { 
 	// bucketArray is used to store array of chains 
 	private ArrayList<HashNode<K, V>> bucketArray; 
@@ -35,7 +35,7 @@ class Map<K, V>
 
 	// Constructor (Initializes capacity, size and 
 	// empty chains. 
-	public Map() 
+	public Map_HashNode() 
 	{ 
 		bucketArray = new ArrayList<>(); 
 		numBuckets = 10; 
@@ -55,6 +55,10 @@ class Map<K, V>
 	{ 
 		int hashCode = key.hashCode(); 
 		int index = hashCode % numBuckets; 
+		//corrects the index if it comes back negative
+		if(index < 0) {
+			index = -index;
+		}
 		return index; 
 	} 
 
@@ -164,3 +168,7 @@ class Map<K, V>
 
 	
 } 
+
+
+	
+
