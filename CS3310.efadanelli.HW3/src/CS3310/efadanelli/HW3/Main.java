@@ -35,7 +35,7 @@ public class Main {
 				data.add(dataLineSplit);
 				dataLine = "";
 				count = 0;
-				numData = numData + data.get(counter).length;		//updates the number of data entries
+				numData = numData + data.get(counter).length - 1;		//updates the number of data entries
 				counter++;
 			}
 			
@@ -65,7 +65,7 @@ public class Main {
 		
 		Scanner kbd = null;
 		while(end != true) {
-			System.out.println("\nthe number of data members is " + numData); //prints number of data entries
+			System.out.println("\n\nthe number of data members is " + numData); //prints number of data entries
 			
 			System.out.println("\nPlease enter a query");
 			kbd = new Scanner(System.in);
