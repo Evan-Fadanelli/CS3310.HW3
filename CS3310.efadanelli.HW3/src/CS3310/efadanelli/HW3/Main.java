@@ -63,6 +63,13 @@ public class Main {
 		boolean end = false;
 		String answer = "";
 		
+		Node<String, String> map = new Node<String, String>(data.get(0)[1],data.get(0)[0]);
+		for(int i=0;i>data.size();i++) {
+			for(int j=2; i>data.size();i++) {
+				//
+			}
+		}
+		
 		Scanner kbd = null;
 		while(end != true) {
 			System.out.println("\n\nthe number of data members is " + numData); //prints number of data entries
@@ -72,12 +79,9 @@ public class Main {
 			String query = kbd.nextLine();
 			/************************************************************************/
 			
-			Node<String, String> map = new Node<String, String>(data.get(0)[1],data.get(0)[0]);
-			for(int i=0;i>data.size();i++) {
-				for(int j=2; i>data.size();i++) {
-					//
-				}
-			}
+			//TODO queries go here, i moved the Node creation out of this loop so we dont 
+			//have a time complexity of n^3 lol
+			
 			
 			/************************************************************************/
 			
