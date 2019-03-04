@@ -18,19 +18,27 @@ public class Main {
 		ArrayList<String[]> data = new ArrayList<String[]>();
 		
 		int count = 0;
-		String dataLine = "";										//initializes dataLine, where the line of data is initially stored
+		String dataLine = "";	//initializes dataLine, where the line of data is initially stored
+		
+		int numData = 0;		//instantiates numData, the number of keys we need
+		int counter = 0;
 		while(fileScanner.hasNextLine()) {
+			
 			count++;
 			if(count == 1) {
 				dataLine = dataLine + fileScanner.nextLine() + " ";	//updates dataLine
 			}
 			if(count == 2){
+				
 				dataLine = dataLine + fileScanner.nextLine();		//splits dataLine and adds it to arrayList
 				String[] dataLineSplit = dataLine.split(" ");
 				data.add(dataLineSplit);
 				dataLine = "";
 				count = 0;
+				numData = numData + data.get(counter).length;		//updates the number of data entries
+				counter++;
 			}
+			
 			
 		}
 		
@@ -57,6 +65,8 @@ public class Main {
 		
 		Scanner kbd = null;
 		while(end != true) {
+			System.out.println("\nthe number of data members is " + numData); //prints number of data entries
+			
 			System.out.println("\nPlease enter a query");
 			kbd = new Scanner(System.in);
 			String query = kbd.nextLine();
@@ -74,6 +84,8 @@ public class Main {
 			
 			
 		}
+		
+		
 		kbd.close();
 		
 	}
