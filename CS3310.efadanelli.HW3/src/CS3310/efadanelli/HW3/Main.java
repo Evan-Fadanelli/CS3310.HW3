@@ -50,7 +50,7 @@ public class Main {
 				if(j == 0) {
 					System.out.println();
 				}
-				System.out.print(data.get(i)[j] + " ");
+				System.out.print(data.get(i)[j] + " ");System.out.print("the number of data members is " + numData); //prints number of data entries
 				if(j == 0) {
 					System.out.println();
 				}
